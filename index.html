@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Ahorros Profesional 3.0</title>
+    <meta name="description" content="Calculadora de ahorros, gastos e ingresos con tips diarios, gráficos y exportación PDF. Controla tus finanzas fácilmente.">
+    <meta name="keywords" content="calculadora de ahorros, finanzas personales, registro de gastos, ingresos, tips de ahorro, herramienta web">
+    <meta name="author" content="Eduardo Abreu Marte">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google AdSense -->
+    <script data-ad-client="ca-pub-3289191632952433" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>💰 Calculadora de Ahorros 3.0</h1>
+        <p>Registra tus ingresos y gastos, obtén tips y gráficos, comparte tus resultados y mejora tu ahorro diario.</p>
+        <nav>
+            <a href="index.html">Inicio</a> | 
+            <a href="privacy.html">Política de Privacidad</a>
+        </nav>
+    </header>
+
+    <!-- Introducción para SEO y usuarios -->
+    <section class="introduccion">
+        <h2>Controla tus finanzas personales fácilmente</h2>
+        <p>Usa esta herramienta para registrar cada ingreso y gasto, visualizar tus balances con gráficos claros, recibir tips diarios de ahorro y exportar tu historial en PDF. Ideal para estudiantes, familias y emprendedores que desean mejorar sus finanzas.</p>
+    </section>
+
+    <!-- AdSense Top Banner -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-3289191632952433"
+         data-ad-slot="7567921562"
+         data-ad-format="auto"></ins>
+
+    <main class="container">
+        <section class="formulario">
+            <input type="text" id="desc" placeholder="Descripción (ej: café, salario)">
+            <input type="number" id="cantidad" placeholder="Cantidad" step="0.01">
+            <select id="tipo">
+                <option value="ingreso">Ingreso</option>
+                <option value="gasto">Gasto</option>
+            </select>
+            <button id="agregarBtn">Agregar</button>
+            <button id="exportPDFBtn">📄 Exportar PDF</button>
+            <button id="toggleThemeBtn">🌙 Cambiar Tema</button>
+        </section>
+
+        <section class="balance">
+            <h2>Balance: $<span id="balance">0.00</span></h2>
+        </section>
+
+        <section class="tips">
+            <h3>💡 Tip del día:</h3>
+            <p id="tip">Agrega tu primer gasto o ingreso para ver tips.</p>
+            <button id="shareBtn">📤 Compartir tip</button>
+        </section>
+
+        <section class="grafico">
+            <h3>📊 Ingresos vs Gastos</h3>
+            <canvas id="chart"></canvas>
+        </section>
+
+        <section class="historial">
+            <h3>📋 Historial</h3>
+            <ul id="historialList"></ul>
+        </section>
+
+        <button id="resetBtn">Resetear Todo</button>
+    </main>
+
+    <!-- AdSense Bottom Banner -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-3289191632952433"
+         data-ad-slot="7567921563"
+         data-ad-format="auto"></ins>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</body>
+</html>
+
+
+
