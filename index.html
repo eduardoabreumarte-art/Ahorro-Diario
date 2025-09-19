@@ -129,9 +129,94 @@
     <script src="script.js"></script>
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script> 
     </script>
+    <!-- Botones flotantes con iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<div id="share-float">
+  <button onclick="shareFacebook()" title="Compartir en Facebook"><i class="fab fa-facebook-f"></i></button>
+  <button onclick="shareTwitter()" title="Compartir en Twitter"><i class="fab fa-twitter"></i></button>
+  <button onclick="shareLinkedIn()" title="Compartir en LinkedIn"><i class="fab fa-linkedin-in"></i></button>
+  <button onclick="shareWhatsApp()" title="Compartir en WhatsApp"><i class="fab fa-whatsapp"></i></button>
+</div>
+
+<script>
+  const pageUrl = encodeURIComponent("https://ahorro-diario.vercel.app/");
+  const pageTitle = encodeURIComponent("Calculadora de Ahorros 3.0");
+
+  function shareFacebook() {
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`, '_blank');
+  }
+
+  function shareTwitter() {
+    window.open(`https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}`, '_blank');
+  }
+
+  function shareLinkedIn() {
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`, '_blank');
+  }
+
+  function shareWhatsApp() {
+    window.open(`https://api.whatsapp.com/send?text=${pageTitle}%20${pageUrl}`, '_blank');
+  }
+</script>
+
+<style>
+  #share-float {
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    z-index: 9999;
+  }
+
+  #share-float button {
+    width: 50px;
+    height: 50px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 50%;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    transition: transform 0.2s, opacity 0.2s;
+  }
+
+  #share-float button:hover {
+    transform: scale(1.1);
+    opacity: 0.85;
+  }
+
+  #share-float button:nth-child(1) { background-color: #3b5998; } /* Facebook */
+  #share-float button:nth-child(2) { background-color: #1da1f2; } /* Twitter */
+  #share-float button:nth-child(3) { background-color: #0073b1; } /* LinkedIn */
+  #share-float button:nth-child(4) { background-color: #25d366; } /* WhatsApp */
+
+  @media(max-width: 600px){
+    #share-float button {
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+    }
+  }
+</style>
+
 </body>
 </html>
+
+
+
+</body>
+</html>
+
 
 
 
