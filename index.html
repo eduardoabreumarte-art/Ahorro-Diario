@@ -1,7 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> 
+    <!-- Optimización para móviles -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Contenedor principal centrado */
+  .container {
+    max-width: 480px;
+    margin: auto;
+    padding: 15px;
+  }
+
+  input, button {
+    width: 100%;
+    padding: 12px;
+    margin: 6px 0;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+
+  button {
+    background: #0073e6;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #005bb5;
+  }
+
+  /* Ajustes extra para pantallas pequeñas */
+  @media (max-width: 480px) {
+    h1 { font-size: 20px; }
+    p, input, button { font-size: 14px; }
+  }
+</style>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Ahorros Profesional 3.0</title>
     <meta name="description" content="Calculadora de ahorros, gastos e ingresos con tips diarios, gráficos y exportación PDF. Controla tus finanzas fácilmente.">
@@ -89,6 +132,7 @@
     </script>
 </body>
 </html>
+
 
 
 
